@@ -55,17 +55,17 @@
                         <a class="nav-link active fw-semibold" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="#service">My Stack</a>
+                        <a class="nav-link fw-semibold" href="#stack">My Stack</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="#portfolio">Portfolio</a>
+                        <a class="nav-link fw-semibold" href="#portfolio">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="#testimonial">Testimonials</a>
+                        <a class="nav-link fw-semibold" href="#testimonial">Experiences</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="#blog">Blog</a>
-                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="#blog">Blogs</a>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link fw-semibold" href="#contact">Contact Me</a>
                     </li>
@@ -78,10 +78,10 @@
                 style="background-color: #3f396d; color: #fff;">
                 <i class="fab fa-linkedin me-2"></i>LinkedIn
             </a>
-            <button id="darkModeToggle" class="btn btn-outline-dark ms-3 rounded-pill">
+            <!-- <button id="darkModeToggle" class="btn btn-outline-dark ms-3 rounded-pill">
                 <i class="bi bi-moon-fill"></i>
-              </button>
-              
+            </button> -->
+
         </div>
     </nav>
     <!-- Navbar Ends -->
@@ -90,34 +90,47 @@
     <!-- home section starts  -->
     <section class="home pt-5 pb-5" id="home" style="background-color: #ffffff; min-height: 100vh;">
         <div class="container">
-            <div class="glass-card-light row align-items-center justify-content-center p-4">
+            <div class="glass-card-light row align-items-center justify-content-center p-4 position-relative">
+                <!-- Text Column -->
                 <div class="col-12 col-md-6 mb-4 mb-md-0" data-aos="fade-right">
                     <h2 class="display-5 fw-bold text-dark">
                         Hi, I'm <span style="color: #3f396d;">Prakriti</span>
                     </h2>
+                    <h5 class="text-muted changing-role" style="min-height: 28px;"></h5>
+
                     <p class="text-muted">
                         Hello! I'm a final-year B.Tech student in AI & ML, but I don't just see myself as someone who
-                        codes—I'm someone who dreams about building technologies that challenge the status quo. I
-                        believe AI should do more than automate; it should be used to solve real-world problems while
-                        staying grounded in ethics and human values. My journey in AI & ML has been one of continuous
-                        curiosity, not just for how systems work, but for why they should work in a particular way.
-                        Every project I work on is an opportunity to push boundaries, whether that's through designing
-                        smarter algorithms, optimizing models, or considering the societal impact of what I'm building.
+                        codes—
+                        I'm someone who dreams about building technologies that challenge the status quo. I believe AI
+                        should
+                        do more than automate; it should be used to solve real-world problems while staying grounded in
+                        ethics and human values. My journey in AI & ML has been one of continuous curiosity, not just
+                        for how
+                        systems work, but for why they should work in a particular way. Every project I work on is an
+                        opportunity to push boundaries, whether that's through designing smarter algorithms, optimizing
+                        models, or considering the societal impact of what I'm building.
                     </p>
                     <a href="Prakriti_s_Resumé.pdf" target="_blank" class="btn rounded-pill px-4 me-2 mt-2"
                         style="background-color: #3f396d; color: #fff;">
                         Check Resumé
                     </a>
                 </div>
-                <div class="col-12 col-md-6 text-center" data-aos="fade-left">
-                    <img src="final banner.jpeg" class="img-fluid floating" style="max-height: 320px;"
-                        alt="Prakriti character" />
+
+                <!-- Image Column with Background Shape -->
+                <div class="col-12 col-md-6 text-center position-relative" data-aos="fade-left">
+                    <div class="image-bg-shape floating-bubble"></div>
+                    <!-- Extra floating bubbles -->
+                    <div class="floating-bubble small-bubble bubble1"></div>
+                    <div class="floating-bubble medium-bubble bubble2"></div>
+                    <div class="floating-bubble large-bubble bubble3"></div>
+                    <img src="portfolio image.jpeg" class="img-fluid profile-photo position-relative"
+                        alt="Prakriti photo" />
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CSS for subtle glassmorphism and float animation -->
+    <!-- CSS Styling -->
     <style>
         .glass-card-light {
             background: rgba(255, 255, 255, 0.85);
@@ -128,27 +141,149 @@
             border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
-        .floating {
-            animation: float 3s ease-in-out infinite;
+        .profile-photo {
+            max-height: 320px;
+            border-radius: 20px;
+            border: 3px solid #e0e0e0;
+            object-fit: cover;
+            z-index: 2;
+            position: relative;
         }
 
-        @keyframes float {
+        .image-bg-shape {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle at 30% 30%, #d3c9ff, #f3f1ff);
+            border-radius: 50% 40% 60% 50% / 50% 60% 40% 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            opacity: 0.6;
+        }
+
+        /* Bubbles */
+        .floating-bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: #d3c9ff;
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .small-bubble {
+            width: 40px;
+            height: 40px;
+        }
+
+        .medium-bubble {
+            width: 60px;
+            height: 60px;
+        }
+
+        .large-bubble {
+            width: 80px;
+            height: 80px;
+        }
+
+        /* Bubble positions */
+        .bubble1 {
+            top: 10%;
+            left: 80%;
+            animation: floatXY1 6s ease-in-out infinite;
+        }
+
+        .bubble2 {
+            bottom: 5%;
+            left: 10%;
+            animation: floatXY2 7s ease-in-out infinite;
+        }
+
+        .bubble3 {
+            top: 25%;
+            right: 5%;
+            animation: floatXY3 8s ease-in-out infinite;
+        }
+
+        /* Floating animation for bubbles */
+        @keyframes floatXY1 {
             0% {
-                transform: translateY(0);
+                transform: translate(0, 0);
             }
 
             50% {
-                transform: translateY(-12px);
+                transform: translate(-10px, -15px);
             }
 
             100% {
-                transform: translateY(0);
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes floatXY2 {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(15px, 10px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes floatXY3 {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(-12px, 12px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        /* Typing Animation for Roles */
+        .changing-role::after {
+            content: "";
+            animation: typingRoles 8s infinite;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #3f396d;
+        }
+
+        @keyframes typingRoles {
+            0% {
+                content: "AI/ML Enthusiast";
+            }
+
+            25% {
+                content: "Researcher";
+            }
+
+            50% {
+                content: "Problem Solver";
+            }
+
+            75% {
+                content: "Ethical Technologist";
+            }
+
+            100% {
+                content: "AI/ML Enthusiast";
             }
         }
     </style>
-    <!-- home section ends -->
-
     <!-- home section ends here -->
+
+
     <!-- portfolio section starts here -->
     <!-- Include AOS in your HTML HEAD -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -429,7 +564,7 @@
     <!-- testimonial ends here -->
 
     <!-- blog section starts -->
-    <section class="blog mt-5 pb-5" id="blog">
+    <!-- <section class="blog mt-5 pb-5" id="blog">
         <div class="heading text-center pt-5">
             <small>Latest News</small>
             <h3>Blog & Articles</h3>
@@ -485,9 +620,9 @@
                             data-bs-target="#exampleModal3">Read More</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- here we will make modals if Read more link is clicked the modal will popup -->
-            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+            <!-- <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -673,8 +808,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </div> -->
+    <!-- </section> -->
     <!-- blog section ends here -->
 
     <!-- contact section starts -->
